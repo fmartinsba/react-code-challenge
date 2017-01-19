@@ -27,7 +27,7 @@ export default class ProgressBar extends React.Component {
 		}
 
 		const { limit } = this.state;
-		const { value } = this.state;
+		const value = this.state.value >= 0 ? this.state.value : 0;
 		const percent = parseInt(( 100 * value ) / limit);
 		const classDanger = value > limit ? "progress-bar-danger" : null;
 
